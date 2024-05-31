@@ -10,3 +10,9 @@ title: "Hacking"
 5. [Movimiento lateral](/blog/hacking/movimiento-lateral/)
 6. [Prueba de concepto](/blog/hacking/prueba-de-concepto/)
 7. [Informe](/blog/hacking/informe/)
+
+---
+
+## Herramientas
+
+[nmap](/blog/hacking/herramientas/nmap)

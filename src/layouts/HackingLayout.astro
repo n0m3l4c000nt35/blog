@@ -1,12 +1,10 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { frontmatter: {title, description} } = Astro.props;
+const { frontmatter: {title, description, link} } = Astro.props;
 ---
 <BaseLayout>
   <h1>{title}</h1>
-  <p>{description}</p>
+  {description && <p><b>Descripción</b>: {description}</p>}
+  {link && <p><b>Link</b>: <a href={link} target="_blank" style="margin-bottom: 1rem;">{title}</a></p>}
   <slot />
-  <button>
-    <a href="../">Atrás</a>
-  </button>
 </BaseLayout>
