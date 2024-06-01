@@ -6,8 +6,4 @@ description: "Herramientas para usar y acciones a llevar a cabo en la fase de re
 
 ---
 
-### [nmap](/blog/hacking/herramientas/nmap)
-
-```shell
-sudo nmap -p- -sS --open --min-rate 5000 -n -Pn 192.168.0.10 -oG openPorts
-```
+- [nmap](/blog/hacking/herramientas/nmap)
