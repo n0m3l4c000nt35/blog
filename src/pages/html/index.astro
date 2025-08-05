@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="html-main-container">
+    <section class="html-header">
+      <svg class="html-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color:#e44d26"><title>HTML5</title><path fill="currentColor" d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+      <h1>HTML</h1>
+      <p>(HyperText Markup Language)</p>
+    </section>
+    <section class="html-content">
+      <h2>¿Qué podés encontrar acá?</h2>
+      <ul>
+        <li>Sintaxis</li>
+        <li>Ejemplos</li>
+        <li>Etiquetas y semántica</li>
+        <li>Recursos y enlaces útiles</li>
+      </ul>
+      <blockquote class="html-quote">"HTML es el esqueleto de toda página web."</blockquote>
+      <a href="/blog" class="back-main-btn">Volver al inicio</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+.html-main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.html-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.html-icon {
+  width: 54px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #e44d26;
+}
+.html-header h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+  color: #e44d26;
+}
+.html-header p {
+  font-size: 1.13rem;
+  color: var(--color-text, #444);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.html-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #e44d26;
+}
+.html-content ul {
+  margin: 0 0 1.2rem 1.2rem;
+  padding: 0;
+  font-size: 1.08rem;
+}
+.html-content li {
+  margin-bottom: 0.4rem;
+}
+.html-quote {
+  margin: 1.5rem 0 0 0;
+  padding: 1rem 1.2rem;
+  background: #fff4e1;
+  border-left: 4px solid #e44d26;
+  border-radius: 8px;
+  font-style: italic;
+  color: #b94c1e;
+  font-size: 1.08rem;
+}
+.back-main-btn {
+  display: inline-block;
+  margin: 2rem auto 0 auto;
+  padding: 0.7rem 2.1rem;
+  background: linear-gradient(90deg, #e44d26 0%, #ff7e29 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #e44d2622;
+  text-decoration: none;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+  cursor: pointer;
+  text-align: center;
+}
+.back-main-btn:hover {
+  background: linear-gradient(90deg, #ff7e29 0%, #e44d26 100%);
+  box-shadow: 0 4px 16px #e44d2644;
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .html-header h1 {
+    font-size: 1.3rem;
+  }
+  .html-main-container {
+    padding: 1.2rem 0.3rem 1.5rem 0.3rem;
+  }
+}
+</style>
