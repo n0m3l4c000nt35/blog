@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="express-main-container">
+    <section class="express-header">
+      <svg class="express-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color:#444"><title>Express</title><path fill="currentColor" d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/></svg>
+      <h1>Express.js</h1>
+      <p>(Framework minimalista para Node.js)</p>
+    </section>
+    <section class="express-content">
+      <h2>¿Qué podés encontrar acá?</h2>
+      <ul>
+        <li>Fundamentos y estructura de Express</li>
+        <li>Rutas, middlewares y controladores</li>
+        <li>Ejemplos de APIs y servidores</li>
+        <li>Recursos y enlaces útiles</li>
+      </ul>
+      <blockquote class="express-quote">"Express simplifica el desarrollo de servidores en Node.js."</blockquote>
+      <a href="/blog" class="back-main-btn">Volver al inicio</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+.express-main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.express-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.express-icon {
+  width: 54px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #444;
+}
+.express-header h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+  color: #444;
+}
+.express-header p {
+  font-size: 1.13rem;
+  color: var(--color-text, #444);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.express-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+.express-content ul {
+  margin: 0 0 1.2rem 1.2rem;
+  padding: 0;
+  font-size: 1.08rem;
+}
+.express-content li {
+  margin-bottom: 0.4rem;
+}
+.express-quote {
+  margin: 1.5rem 0 0 0;
+  padding: 1rem 1.2rem;
+  background: #f3f3f3;
+  border-left: 4px solid #444;
+  border-radius: 8px;
+  font-style: italic;
+  color: #222;
+  font-size: 1.08rem;
+}
+.back-main-btn {
+  display: inline-block;
+  margin: 2rem auto 0 auto;
+  padding: 0.7rem 2.1rem;
+  background: linear-gradient(90deg, #444 0%, #888 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #4442;
+  text-decoration: none;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+  cursor: pointer;
+  text-align: center;
+}
+.back-main-btn:hover {
+  background: linear-gradient(90deg, #888 0%, #444 100%);
+  box-shadow: 0 4px 16px #4444;
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .express-header h1 {
+    font-size: 1.3rem;
+  }
+  .express-main-container {
+    padding: 1.2rem 0.3rem 1.5rem 0.3rem;
+  }
+}
+</style>

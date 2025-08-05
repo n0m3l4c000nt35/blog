@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="mongo-main-container">
+    <section class="mongo-header">
+      <svg class="mongo-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="color:#47a248"><title>MongoDB</title><path fill="currentColor" d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"/></svg>
+      <h1>MongoDB</h1>
+      <p>(Base de datos NoSQL orientada a documentos)</p>
+    </section>
+    <section class="mongo-content">
+      <h2>¿Qué podés encontrar acá?</h2>
+      <ul>
+        <li>Fundamentos y conceptos de MongoDB</li>
+        <li>Ejemplos de consultas y colecciones</li>
+        <li>Modelado de datos y buenas prácticas</li>
+        <li>Recursos y enlaces útiles</li>
+      </ul>
+      <blockquote class="mongo-quote">"MongoDB es flexible, escalable y fácil de usar para proyectos modernos."</blockquote>
+      <a href="/blog" class="back-main-btn">Volver al inicio</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+.mongo-main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 2.5rem 1rem;
+  font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+.mongo-header {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+.mongo-icon {
+  width: 54px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #47a248;
+}
+.mongo-header h1 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+  color: #47a248;
+}
+.mongo-header p {
+  font-size: 1.13rem;
+  color: var(--color-text, #444);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.mongo-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #47a248;
+}
+.mongo-content ul {
+  margin: 0 0 1.2rem 1.2rem;
+  padding: 0;
+  font-size: 1.08rem;
+}
+.mongo-content li {
+  margin-bottom: 0.4rem;
+}
+.mongo-quote {
+  margin: 1.5rem 0 0 0;
+  padding: 1rem 1.2rem;
+  background: #e8f5e9;
+  border-left: 4px solid #47a248;
+  border-radius: 8px;
+  font-style: italic;
+  color: #2e6b3b;
+  font-size: 1.08rem;
+}
+.back-main-btn {
+  display: inline-block;
+  margin: 2rem auto 0 auto;
+  padding: 0.7rem 2.1rem;
+  background: linear-gradient(90deg, #47a248 0%, #7ed957 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.08rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #47a24822;
+  text-decoration: none;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+  cursor: pointer;
+  text-align: center;
+}
+.back-main-btn:hover {
+  background: linear-gradient(90deg, #7ed957 0%, #47a248 100%);
+  box-shadow: 0 4px 16px #47a24844;
+  transform: translateY(-2px) scale(1.04);
+  color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .mongo-header h1 {
+    font-size: 1.3rem;
+  }
+  .mongo-main-container {
+    padding: 1.2rem 0.3rem 1.5rem 0.3rem;
+  }
+}
+</style>
