@@ -1,0 +1,97 @@
+---
+/**
+ * Props:
+ * - title: string (required)
+ * - description: string (optional)
+ * - image: string (optional, absolute or relative URL)
+ * - url: string (optional, canonical URL)
+ * - children: slot
+ */
+const {
+  title = "Blog",
+  description = "Blog de tecnología, programación y desarrollo.",
+  image = "/blog/og-default.png",
+  url = "",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg" />
+    <link rel="canonical" href={url || Astro.url?.href || ""} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={url || Astro.url?.href || ""} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content={title} />
+    <meta name="theme-color" content="#0969da" />
+
+    <!-- Manifest (PWA) -->
+    <link rel="manifest" href="/blog/manifest.webmanifest" />
+
+    <!-- Preconnects & Fonts (example with Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Extra head slot for per-page customization -->
+    <slot name="head" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  :root {
+    --color-bg: #f6f8fa;
+    --color-bg-secondary: #fff;
+    --color-text: #24292f;
+    --color-border: #d0d7de;
+    --color-accent: #0969da;
+    --color-card: #fff;
+    --color-link-hover: #174ea6;
+    --color-selection: #b3d4fc;
+    --radius: 12px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --font-main: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #0d1117;
+      --color-bg-secondary: #161b22;
+      --color-text: #c9d1d9;
+      --color-border: #30363d;
+      --color-accent: #58a6ff;
+      --color-card: #161b22;
+      --color-link-hover: #8ecbff;
+      --color-selection: #204070;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+  }
+</style>

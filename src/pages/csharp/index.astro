@@ -1,112 +1,14 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 
-<Layout>
-  <div class="csharp-main-container">
-    <section class="csharp-header">
-      <svg class="csharp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" style="color:#68217a"><title>C#</title><path fill="currentColor" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/><path fill="currentColor" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h4.2v4.7h-5.1l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8l-.9 4.3z"/></svg>
-      <h1>C#</h1>
-      <p>(Lenguaje de programación moderno y versátil)</p>
-    </section>
-    <section class="csharp-content">
-      <h2>¿Qué podés encontrar acá?</h2>
-      <ul>
-        <li>Fundamentos y sintaxis de C#</li>
-        <li>Ejemplos de programación orientada a objetos</li>
-        <li>Aplicaciones de escritorio, web y más</li>
-        <li>Recursos y enlaces útiles</li>
-      </ul>
-      <blockquote class="csharp-quote">"C# es robusto, seguro y ampliamente usado en el desarrollo profesional."</blockquote>
-      <a href="/blog" class="back-main-btn">Volver al inicio</a>
-    </section>
-  </div>
-</Layout>
-
-<style>
-.csharp-main-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2.5rem 1rem 2.5rem 1rem;
-  font-family: Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
-.csharp-header {
-  text-align: center;
-  margin-bottom: 2.2rem;
-}
-.csharp-icon {
-  width: 54px;
-  margin-bottom: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  color: #68217a;
-}
-.csharp-header h1 {
-  font-size: 2.1rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  letter-spacing: -1px;
-  color: #68217a;
-}
-.csharp-header p {
-  font-size: 1.13rem;
-  color: var(--color-text, #444);
-  max-width: 500px;
-  margin: 0 auto;
-}
-.csharp-content h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.8rem;
-  color: #68217a;
-}
-.csharp-content ul {
-  margin: 0 0 1.2rem 1.2rem;
-  padding: 0;
-  font-size: 1.08rem;
-}
-.csharp-content li {
-  margin-bottom: 0.4rem;
-}
-.csharp-quote {
-  margin: 1.5rem 0 0 0;
-  padding: 1rem 1.2rem;
-  background: #f1eaff;
-  border-left: 4px solid #68217a;
-  border-radius: 8px;
-  font-style: italic;
-  color: #4b1760;
-  font-size: 1.08rem;
-}
-.back-main-btn {
-  display: inline-block;
-  margin: 2rem auto 0 auto;
-  padding: 0.7rem 2.1rem;
-  background: linear-gradient(90deg, #68217a 0%, #a259c4 100%);
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.08rem;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px #68217a22;
-  text-decoration: none;
-  transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
-  cursor: pointer;
-  text-align: center;
-}
-.back-main-btn:hover {
-  background: linear-gradient(90deg, #a259c4 0%, #68217a 100%);
-  box-shadow: 0 4px 16px #68217a44;
-  transform: translateY(-2px) scale(1.04);
-  color: #fff;
-}
-@media screen and (max-width: 600px) {
-  .csharp-header h1 {
-    font-size: 1.3rem;
-  }
-  .csharp-main-container {
-    padding: 1.2rem 0.3rem 1.5rem 0.3rem;
-  }
-}
-</style>
+<BaseLayout>
+  <ul>
+    <li>
+      <a href="">Tipos de datos</a>
+    </li>
+  </ul>
+  <a href="/blog/">
+    <button>Volver</button>
+  </a>
+</BaseLayout>
