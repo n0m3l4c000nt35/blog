@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BaseLayout.astro
+layout: ../../../layouts/BlogLayout.astro
 title: Autenticación
 ---
 
