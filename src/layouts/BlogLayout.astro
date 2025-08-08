@@ -1,0 +1,16 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+---
+
+<BaseLayout>
+  <main class="blog-main">
+    <slot />
+  </main>
+</BaseLayout>
+
+<style>
+  .blog-main {
+    max-width: 767px;
+    margin-inline: auto;
+  }
+</style>
