@@ -68,7 +68,6 @@ string myText = "Hello";
     color: crimson
   }
 
-  /* Estilos para el bloque de código */
 pre code {
   background: #232136;
   color: #fff;
