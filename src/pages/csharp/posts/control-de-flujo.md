@@ -1,33 +1,54 @@
 ---
 layout: ../../../layouts/BlogLayout.astro
-title: Tipos de datos
+title: Control de flujo
 ---
 
-# Tipos de datos
+# Control de flujo
 
-## Value types (almacenan el valor directamente)
+## if-else
 
-- Numéricos enteros: `byte`, `short`, `int`, `long`
-- Numéricos decimales: `float`, `double`, `decimal`
-- Otros: `bool`, `char`, `DateTime`, `struct`
+```csharp
+int number = 10;
 
-## Rerefence types (almacenan una referencia a los datos en memoria)
+if (number > 0)
+    Console.WriteLine("Positive");
+else if (number < 0)
+    Console.WriteLine("Negative");
+else
+    Console.WriteLine("Zero");
+```
 
-- `string`
-- `object` (base de todos los tipos)
-- `class`, `interface`, `delegate`
+## switch
 
-## Especiales
+```csharp
+switch (number)
+{
+    case > 0:
+        Console.WriteLine("Positive");
+        break;
+    case < 0:
+        Console.WriteLine("Negative");
+        break;
+    default:
+        Console.WriteLine("Zero");
+        break;
+}
+```
 
-- `var`
-- `dynamic`
-- `nullable` → `int?`, `DateTime?` (permite `null` en value types)
+## for
 
-## Conversiones
+```csharp
+for (int i = 0; i < 5; i++)
+Console.WriteLine(i);
+```
 
-- Implícitas → seguras (ej. `int` → `long`)
-- Explícitas (casting) → `(double)miEntero`
-- Métodos: `Convert.ToInt32()`, `int.Parse()`, `int.TryParse()`
+## foreach
+
+```csharp
+var names = new List<string> { "Alice", "Bob" };
+foreach (var name in names)
+    Console.WriteLine(name);
+```
 
 <hr>
 

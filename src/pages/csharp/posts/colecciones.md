@@ -1,33 +1,33 @@
 ---
 layout: ../../../layouts/BlogLayout.astro
-title: Tipos de datos
+title: Colecciones
 ---
 
-# Tipos de datos
+# Colecciones
 
-## Value types (almacenan el valor directamente)
+## Array
 
-- Numéricos enteros: `byte`, `short`, `int`, `long`
-- Numéricos decimales: `float`, `double`, `decimal`
-- Otros: `bool`, `char`, `DateTime`, `struct`
+```csharp
+int[] numbers = { 1, 2, 3 };
+Console.WriteLine(numbers[0]); // 1
+```
 
-## Rerefence types (almacenan una referencia a los datos en memoria)
+## List
 
-- `string`
-- `object` (base de todos los tipos)
-- `class`, `interface`, `delegate`
+```csharp
+var list = new List<string> { "A", "B" };
+list.Add("C");
+list.Remove("B");
+```
 
-## Especiales
+## Dictionary
 
-- `var`
-- `dynamic`
-- `nullable` → `int?`, `DateTime?` (permite `null` en value types)
-
-## Conversiones
-
-- Implícitas → seguras (ej. `int` → `long`)
-- Explícitas (casting) → `(double)miEntero`
-- Métodos: `Convert.ToInt32()`, `int.Parse()`, `int.TryParse()`
+```csharp
+var dict = new Dictionary<string, int>();
+dict["Apples"] = 5;
+dict["Oranges"] = 3;
+Console.WriteLine(dict["Apples"]);
+```
 
 <hr>
 
