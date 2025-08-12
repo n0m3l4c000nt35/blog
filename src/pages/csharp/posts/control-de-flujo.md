@@ -5,7 +5,9 @@ title: Control de flujo
 
 # Control de flujo
 
-## if-else
+## Condicionales
+
+### if-else
 
 ```csharp
 int number = 10;
@@ -18,7 +20,7 @@ else
     Console.WriteLine("Zero");
 ```
 
-## switch
+### switch
 
 ```csharp
 switch (number)
@@ -35,20 +37,48 @@ switch (number)
 }
 ```
 
-## for
+## Bucles
+
+### for
 
 ```csharp
 for (int i = 0; i < 5; i++)
 Console.WriteLine(i);
 ```
 
-## foreach
+### foreach
 
 ```csharp
 var names = new List<string> { "Alice", "Bob" };
 foreach (var name in names)
     Console.WriteLine(name);
 ```
+
+### while
+
+```csharp
+while (contador < 10)
+{
+    contador++;
+}
+```
+
+### do while
+
+```csharp
+do
+{
+    Console.WriteLine("Se ejecuta al menos una vez");
+} while (condicion);
+```
+
+#### Interrupciones
+
+`break` → sale del bucle
+
+`continue` → salta a la siguiente iteración
+
+`return` → sale del método
 
 <hr>
 
