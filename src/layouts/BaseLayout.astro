@@ -24,7 +24,7 @@ const {
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/blog/favicon.ico" />
     <link rel="canonical" href={url || Astro.url?.href || ""} />
 
     <!-- Open Graph / Facebook -->
@@ -51,6 +51,7 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/blog/styles/global.css" />
 
     <!-- Extra head slot for per-page customization -->
     <slot name="head" />

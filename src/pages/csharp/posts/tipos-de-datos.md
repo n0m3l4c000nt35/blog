@@ -5,91 +5,59 @@ title: Tipos de datos
 
 # Tipos de datos
 
-4 bytes
+## Value types
+
+Almacenan el valor directamente en memoria stack
+
+- Numéricos enteros: `int`, `long`, `short`, `byte`
+- Numéricos decimales: `float`, `double`, `decimal`
+- Booleanos → `bool`
+- Caracteres → `char`
+- Estructuras → `struct`
+- Enumeraciones → `enum`
+- Otros → `DateTime`
 
 ```csharp
-int myNum = 5;
+int edad = 25;
+float altura = 1.75f;
+bool esMayor = true;
+char inicial = 'A';
 ```
 
-8 bytes
+## Rerefence types
+
+Se guardan en memoria heap
+
+Una variable almacena la referencia (dirección) al objeto
+
+Si se copia la referencia se apunta al mismo objeto
+
+- Cadenas de texto → `string`
+- Objetos → `class`
+- Arrays
+- Colecciones
+- Interfaces → `interface`
 
 ```csharp
-long myNum = 854.775;
+string nombre = "Juan";
+string otroNombre = nombre;
+// Ambos apuntan al mismo texto
 ```
 
-4 bytes
+## Especiales
 
-```csharp
-float myNum = 85.775;
-```
+- `var`
+- `dynamic`
+- `nullable` → `int?`, `DateTime?` (permite `null` en value types)
 
-8 bytes
+## Conversiones
 
-```csharp
-double myDoubleNum = 5.99D;
-```
-
-2 bytes
-
-```csharp
-char myLetter = 'D';
-```
-
-1 byte
-
-```csharp
-bool myBool = true;
-```
-
-2 bytes por caracter
-
-```csharp
-string myText = "Hello";
-```
+- Implícitas → seguras (ej. `int` → `long`)
+- Explícitas (casting) → `(double)miEntero`
+- Métodos: `Convert.ToInt32()`, `int.Parse()`, `int.TryParse()`
 
 <hr>
 
 <p class="link-back-container">
   <a class="link-back" href="/blog/csharp">Volver</a>
 </p>
-
-<style>
-  .link-back-container {
-    margin: 0;
-  }
-
-  .link-back {
-    color: var(--color-text);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .link-back:hover {
-    color: crimson
-  }
-
-  /* Estilos para el bloque de código */
-pre code {
-  background: #232136;
-  color: #fff;
-  border-radius: 8px;
-  padding: 1rem 1.2rem;
-  display: block;
-  font-size: 1.05rem;
-  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
-  line-height: 1.6;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  overflow-x: auto;
-}
-pre code:hover {
-  background: #343152ff;
-}
-pre {
-  background: #232136;
-  border-radius: 8px;
-  margin: 1.2rem 0;
-  padding: 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  overflow-x: auto;
-}
-</style>
