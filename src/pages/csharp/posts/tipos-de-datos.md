@@ -11,17 +11,18 @@ Almacenan el valor directamente en memoria stack
 
 - Numéricos enteros: `int`, `long`, `short`, `byte`
 - Numéricos decimales: `float`, `double`, `decimal`
-- Booleanos → `bool`
-- Caracteres → `char`
+- Booleanos → `bool` (`true` o `false`)
+- Caracteres → `char` (un único carácter Unicode)
 - Estructuras → `struct`
 - Enumeraciones → `enum`
-- Otros → `DateTime`
+- Fechas → `DateTime`
 
 ```csharp
 int edad = 25;
 float altura = 1.75f;
 bool esMayor = true;
 char inicial = 'A';
+DateTime hoy = DateTime.Now;
 ```
 
 ## Rerefence types
@@ -32,7 +33,7 @@ Una variable almacena la referencia (dirección) al objeto
 
 Si se copia la referencia se apunta al mismo objeto
 
-- Cadenas de texto → `string`
+- Cadenas de texto → `string` (inmutable)
 - Objetos → `class`
 - Arrays
 - Colecciones
