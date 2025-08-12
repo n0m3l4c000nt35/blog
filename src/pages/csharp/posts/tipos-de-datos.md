@@ -5,17 +5,44 @@ title: Tipos de datos
 
 # Tipos de datos
 
-## Value types (almacenan el valor directamente)
+## Value types
 
-- Numéricos enteros: `byte`, `short`, `int`, `long`
+Almacenan el valor directamente en memoria stack
+
+- Numéricos enteros: `int`, `long`, `short`, `byte`
 - Numéricos decimales: `float`, `double`, `decimal`
-- Otros: `bool`, `char`, `DateTime`, `struct`
+- Booleanos → `bool`
+- Caracteres → `char`
+- Estructuras → `struct`
+- Enumeraciones → `enum`
+- Otros → `DateTime`
 
-## Rerefence types (almacenan una referencia a los datos en memoria)
+```csharp
+int edad = 25;
+float altura = 1.75f;
+bool esMayor = true;
+char inicial = 'A';
+```
 
-- `string`
-- `object` (base de todos los tipos)
-- `class`, `interface`, `delegate`
+## Rerefence types
+
+Se guardan en memoria heap
+
+Una variable almacena la referencia (dirección) al objeto
+
+Si se copia la referencia se apunta al mismo objeto
+
+- Cadenas de texto → `string`
+- Objetos → `class`
+- Arrays
+- Colecciones
+- Interfaces → `interface`
+
+```csharp
+string nombre = "Juan";
+string otroNombre = nombre;
+// Ambos apuntan al mismo texto
+```
 
 ## Especiales
 
@@ -34,40 +61,3 @@ title: Tipos de datos
 <p class="link-back-container">
   <a class="link-back" href="/blog/csharp">Volver</a>
 </p>
-
-<style>
-  .link-back-container {
-    margin: 0;
-  }
-
-  .link-back {
-    color: var(--color-text);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .link-back:hover {
-    color: crimson
-  }
-
-pre code {
-  background: #232136;
-  color: #fff;
-  border-radius: 8px;
-  padding: 1rem 1.2rem;
-  display: block;
-  font-size: 1.05rem;
-  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
-  line-height: 1.6;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  overflow-x: auto;
-}
-pre {
-  background: #232136;
-  border-radius: 8px;
-  margin: 1.2rem 0;
-  padding: 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  overflow-x: auto;
-}
-</style>

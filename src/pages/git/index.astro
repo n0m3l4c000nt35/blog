@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const {
+  title = "Git - Blog",
+  description = "",
+  image = "",
+  url = "",
+} = Astro.props;
+
+const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+---
+
+<BaseLayout title={title} description={description} image={image} url={url}>
+  <main class="blog-main">
+      <header class="blog-header">
+      <h1>Git</h1>
+    </header>
+    <ul class="blog-list">
+      {
+        posts.map(post => (
+          <li key={post.url}>
+            <a href={post.url}>{post.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <hr>
+    <a class="link-back" href="/blog/">Volver</a>
+  </main>
+</BaseLayout>
+
+<style>
+  .blog-main{
+    max-width: 767px;
+    margin-inline: auto;
+  }
+  .blog-header{
+    text-align: center;
+  }
+
+  .blog-list {
+    padding-left: 0;
+  }
+
+  .blog-list li {
+    list-style-type: none;
+  }
+
+  .blog-list li:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-list li a {
+    display: block;
+    border-radius: 6px;
+    padding: 0.5rem;
+    background-color: crimson;
+    color: var(--color-text);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .blog-list li a:hover {
+    background-color: #ed143cb9;
+  }
+  .link-back {
+    color: var(--color-text);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .link-back:hover {
+    color: crimson
+  }
+</style>
