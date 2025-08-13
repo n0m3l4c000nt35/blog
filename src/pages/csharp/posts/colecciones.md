@@ -5,14 +5,14 @@ title: Colecciones
 
 # Colecciones
 
-## Array
+## Arreglos (Arrays)
 
 ```csharp
 int[] numbers = { 1, 2, 3 };
 Console.WriteLine(numbers[0]); // 1
 ```
 
-## List
+## List (Lista)
 
 ```csharp
 var list = new List<string> { "A", "B" };
@@ -20,7 +20,7 @@ list.Add("C");
 list.Remove("B");
 ```
 
-## Dictionary
+## Dictionary (Diccionario)
 
 ```csharp
 var dict = new Dictionary<string, int>();

@@ -34,8 +34,8 @@ Una variable almacena la referencia (dirección) al objeto
 Si se copia la referencia se apunta al mismo objeto
 
 - Cadenas de texto → `string` (inmutable)
-- Objetos → `class`
-- Arrays
+- Objetos → `class` (instancias de clases)
+- Arrays → `int[]`, `string[]`
 - Colecciones
 - Interfaces → `interface`
 
@@ -43,6 +43,8 @@ Si se copia la referencia se apunta al mismo objeto
 string nombre = "Juan";
 string otroNombre = nombre;
 // Ambos apuntan al mismo texto
+
+int[] numeros = {1, 2, 3};
 ```
 
 ## Especiales

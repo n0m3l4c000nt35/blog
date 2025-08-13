@@ -57,8 +57,10 @@ foreach (var name in names)
 ### while
 
 ```csharp
-while (contador < 10)
+int contador = 0;
+while (contador < 5)
 {
+    Console.WriteLine(contador);
     contador++;
 }
 ```
