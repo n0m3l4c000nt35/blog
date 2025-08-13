@@ -17,5 +17,5 @@ git push -u origin main
 <hr>
 
 <p class="link-back-container">
-  <a class="link-back" href="/blog/csharp">Volver</a>
+  <a class="link-back" href="/blog/git">Volver</a>
 </p>
