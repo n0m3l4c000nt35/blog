@@ -28,8 +28,6 @@ th {
   background: #4e4d50ff;
   border-radius: 4px;
   padding: 0.18em 0.38em;
-  font-size: 0.98em;
-  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
   box-shadow: 0 1px 4px #854cc711;
   word-break: break-word;
   font-weight: 600;
@@ -58,7 +56,7 @@ pre {
 }
 
 ul li:not(:last-child) {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .link-back-container {
