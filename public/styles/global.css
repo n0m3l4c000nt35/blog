@@ -55,7 +55,8 @@ pre {
   overflow-x: auto;
 }
 
-ul li:not(:last-child) {
+ul li:not(:last-child),
+ol li:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
@@ -71,4 +72,39 @@ ul li:not(:last-child) {
 
 .link-back:hover {
   color: crimson;
+}
+
+.blog-main {
+  max-width: 767px;
+  margin-inline: auto;
+}
+
+.blog-header {
+  text-align: center;
+}
+
+.blog-list {
+  padding-left: 0;
+}
+
+.blog-list li {
+  list-style-type: none;
+}
+
+.blog-list li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.blog-list li a {
+  display: block;
+  border-radius: 6px;
+  padding: 0.5rem;
+  background-color: crimson;
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.blog-list li a:hover {
+  background-color: #ed143cb9;
 }

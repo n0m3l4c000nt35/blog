@@ -16,6 +16,16 @@ const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
       <header class="blog-header">
       <h1>.NET</h1>
     </header>
+    <h2></h2>
+    <ul>
+      <li>
+        <a href="https://learn.microsoft.com/es-mx/dotnet/fundamentals/">Documentación sobre los aspectos básicos de .NET</a>
+      </li>
+      <li>
+        <a href="https://learn.microsoft.com/es-mx/dotnet/core/tools/">Información general sobre la CLI de .NET</a>
+      </li>
+      <li>C# in Depth (4th ed.) (J. Skeet)</li>
+    </ul>
     <ul class="blog-list">
       {
         posts.map(post => (
@@ -29,48 +39,3 @@ const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
     <a class="link-back" href="/blog/">Volver</a>
   </main>
 </BaseLayout>
-
-<style>
-  .blog-main{
-    max-width: 767px;
-    margin-inline: auto;
-  }
-  .blog-header{
-    text-align: center;
-  }
-
-  .blog-list {
-    padding-left: 0;
-  }
-
-  .blog-list li {
-    list-style-type: none;
-  }
-
-  .blog-list li:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
-  
-  .blog-list li a {
-    display: block;
-    border-radius: 6px;
-    padding: 0.5rem;
-    background-color: crimson;
-    color: var(--color-text);
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .blog-list li a:hover {
-    background-color: #ed143cb9;
-  }
-  .link-back {
-    color: var(--color-text);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .link-back:hover {
-    color: crimson
-  }
-</style>
