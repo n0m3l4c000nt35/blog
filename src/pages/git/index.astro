@@ -13,9 +13,25 @@ const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 
 <BaseLayout title={title} description={description} image={image} url={url}>
   <main class="blog-main">
-      <header class="blog-header">
+    <header class="blog-header">
       <h1>Git</h1>
     </header>
+    <hr>
+    <ul class="references-links">
+      <li>
+        <a href="https://git-scm.com/doc" target="_blank">Documentación oficial</a>
+      </li>
+      <li>
+        <a href="https://git-scm.com/book/en/v2" target="_blank">Libro Pro Git (Scott Chacon & Ben Straub)</a>
+      </li>
+      <li>
+        <a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank">Convenciones de commits</a>
+      </li>
+      <li>
+        <a href="https://pcottle.github.io/learnGitBranching/" target="_blank">LearnGitBranching</a>
+      </li>
+    </ul>
+    <hr>
     <ul class="blog-list">
       {
         posts.map(post => (
@@ -31,46 +47,10 @@ const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 </BaseLayout>
 
 <style>
-  .blog-main{
-    max-width: 767px;
-    margin-inline: auto;
+  h1 {
+    color: #f05032;
   }
-  .blog-header{
-    text-align: center;
-  }
-
-  .blog-list {
-    padding-left: 0;
-  }
-
-  .blog-list li {
-    list-style-type: none;
-  }
-
-  .blog-list li:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
-  
-  .blog-list li a {
-    display: block;
-    border-radius: 6px;
-    padding: 0.5rem;
-    background-color: crimson;
-    color: var(--color-text);
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .blog-list li a:hover {
-    background-color: #ed143cb9;
-  }
-  .link-back {
-    color: var(--color-text);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .link-back:hover {
-    color: crimson
+  .references-links li a:hover {
+    color: #f05032;
   }
 </style>

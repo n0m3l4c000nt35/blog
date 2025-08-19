@@ -13,19 +13,21 @@ const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 
 <BaseLayout title={title} description={description} image={image} url={url}>
   <main class="blog-main">
-      <header class="blog-header">
+    <header class="blog-header">
       <h1>.NET</h1>
     </header>
-    <h2></h2>
-    <ul>
+    <hr>
+    <ul class="references-links">
       <li>
-        <a href="https://learn.microsoft.com/es-mx/dotnet/fundamentals/">Documentación sobre los aspectos básicos de .NET</a>
+        <a href="https://learn.microsoft.com/es-mx/dotnet/fundamentals/" target="_blank">Documentación sobre los aspectos básicos de .NET</a>
       </li>
       <li>
-        <a href="https://learn.microsoft.com/es-mx/dotnet/core/tools/">Información general sobre la CLI de .NET</a>
+        <a href="https://learn.microsoft.com/es-mx/dotnet/core/tools/" target="_blank">Información general sobre la CLI de .NET</a>
       </li>
-      <li>C# in Depth (4th ed.) (J. Skeet)</li>
+      <li>
+        <a href="https://csharpindepth.com/" target="_blank">C# in Depth (4th ed.) (J. Skeet)</a></li>
     </ul>
+    <hr>
     <ul class="blog-list">
       {
         posts.map(post => (
@@ -39,3 +41,12 @@ const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
     <a class="link-back" href="/blog/">Volver</a>
   </main>
 </BaseLayout>
+
+<style>
+  h1 {
+    color: #512BD4;
+  }
+  .references-links li a:hover {
+    color: #512BD4;
+  }
+</style>
