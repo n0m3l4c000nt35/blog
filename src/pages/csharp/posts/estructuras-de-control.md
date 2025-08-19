@@ -87,6 +87,17 @@ switch (opcion)
 }
 ```
 
+```csharp
+// Switch expression
+string mensaje = edad switch
+{
+    < 18 => "Menor de edad",
+    >= 18 and < 65 => "Adulto",
+    _ => "Adulto mayor"
+};
+Console.WriteLine(mensaje);
+```
+
 Cada `case` debe terminar con `break` para evitar que el flujo continúe a la siguiente opción.
 
 `default` es opcional y se ejecuta si ninguna condición coincide.
@@ -104,16 +115,6 @@ int edad = 20;
 string mensaje = edad >= 18 ? "Mayor de edad" : "Menor de edad";
 Console.WriteLine(mensaje);
 ```
-
-### Tarea práctica
-
-Programa que pida un número del 1 al 7 y muestre el día de la semana (1 = lunes, etc.) usando switch.
-
-Programa que pregunte la temperatura y muestre:
-
-- "Frío" si es menor a 10°C
-- "Templado" si está entre 10°C y 25°C
-- "Caluroso" si es mayor a 25°C
 
 <hr>
 
