@@ -21,41 +21,20 @@ string name = "Esteban";
 int age = 30;
 ```
 
-## Tipos de datos principales en C#
+## Tipos de datos
 
-| Tipo       | Descripción       | Ejemplo         |
-| ---------- | ----------------- | --------------- |
-| `string`   | Texto             | `"Hola"`        |
-| `int`      | Números enteros   | `42`            |
-| `double`   | Números decimales | `3.14`          |
-| `bool`     | Verdadero/Falso   | `true`, `false` |
-| `char`     | Un solo carácter  | `'A'`           |
-| `DateTime` | Fechas y horas    | `DateTime.Now`  |
-
-### Ejemplo práctico
-
-Programa que pide el nombre y edad al usuario y luego muestre un mensaje.
-
-```csharp
-// Pedimos nombre al usuario
-Console.WriteLine("¿Cuál es tu nombre?");
-string name = Console.ReadLine(); // Lee el texto que el usuario escribe
-
-// Pedimos edad al usuario
-Console.WriteLine("¿Cuántos años tienes?");
-int age = int.Parse(Console.ReadLine()); // Convierte el texto a número entero
-
-// Mostramos el mensaje final
-Console.WriteLine($"Hola {name}, tienes {age} años.");
-```
-
-Explicación:
-
-- `Console.ReadLine()` → Lee una línea de texto de la consola.
-- `int.Parse(...)` → Convierte el texto ingresado a un número entero.
-- `$"Hola {name}..."` → Interpolación de cadenas, permite insertar variables dentro de un string usando {}.
-
-⚠️ Si el usuario escribe algo que no es un número, `int.Parse` dará error.
+| Tipo       | Descripción       | Ejemplo                |
+| ---------- | ----------------- | ---------------------- |
+| `string`   | Texto             | `"Hola"`               |
+| `int`      | Números enteros   | `42`                   |
+| `long`     | Números enteros   | `1234567890123456789L` |
+| `byte`     | Números enteros   | `255`                  |
+| `float`    | Números decimales | `5.5f`                 |
+| `double`   | Números decimales | `3.14`                 |
+| `decimal`  | Números decimales | `19.99m`               |
+| `bool`     | Verdadero/Falso   | `true`, `false`        |
+| `char`     | Un solo carácter  | `'A'`                  |
+| `DateTime` | Fechas y horas    | `DateTime.Now`         |
 
 <hr>
 
